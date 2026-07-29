@@ -16,9 +16,11 @@
 
 #### 下载地址
 
-网盘下载地址：`https://www.123865.com/s/ihEKVv-Sflx?pwd=vCI5#`
+微信安装包太大无法放蓝奏云
 
-私有网盘地址：`http://r5.ikanade.cn:25244/@s/Qp9jxwPV`
+网盘下载地址(需要登录)：`https://www.123865.com/s/ihEKVv-Sflx?pwd=vCI5#`
+
+私有网盘地址(免登录)：`http://r5.ikanade.cn:25244/@s/Qp9jxwPV`
 
 微信的话使用安装版(exe)或者绿色版(7z,zip)都可以，后者解压之后就能用，可以和其他版本共存。
 
