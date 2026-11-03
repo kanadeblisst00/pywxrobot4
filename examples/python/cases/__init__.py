@@ -1,0 +1,70 @@
+"""每个内置插件对应一个可单独阅读的 HTTP 调用案例。"""
+
+from . import (
+    accept_user_request,
+    auto_download_resources,
+    classify_labels,
+    dont_revoke,
+    download_recent_user_images,
+    enter_room_tip,
+    export_biz_list,
+    export_contacts,
+    export_room_list,
+    export_room_members,
+    invite_to_room,
+    room_ai_reply,
+    room_members_deduplication,
+    room_message_guard,
+    room_msg_summary,
+    room_qrcode_guard,
+    user_msg_summary,
+    vmq_monitor,
+    we_mp_rss_node,
+)
+
+MESSAGE = {
+    "accept_user_request": accept_user_request.handle,
+    "enter_room_tip": enter_room_tip.handle,
+    "invite_to_room": invite_to_room.handle,
+    "auto_download_resources": auto_download_resources.handle,
+    "room_ai_reply": room_ai_reply.handle,
+    "room_message_guard": room_message_guard.handle,
+    "room_qrcode_guard": room_qrcode_guard.handle,
+    "vmq_monitor": vmq_monitor.handle,
+    "we_mp_rss_node": we_mp_rss_node.handle,
+}
+
+MANUAL = {
+    "dont_revoke": dont_revoke.run,
+    "classify_labels": classify_labels.run,
+    "room_members_deduplication": room_members_deduplication.run,
+    "room_msg_summary": room_msg_summary.run,
+    "export_room_members": export_room_members.run,
+    "export_contacts": export_contacts.run,
+    "export_biz_list": export_biz_list.run,
+    "export_room_list": export_room_list.run,
+    "user_msg_summary": user_msg_summary.run,
+    "download_recent_user_images": download_recent_user_images.run,
+}
+
+TITLES = {
+    "accept_user_request": "自动同意好友申请",
+    "enter_room_tip": "进群欢迎",
+    "invite_to_room": "自动邀请好友进群",
+    "dont_revoke": "防撤回",
+    "classify_labels": "好友标签分类",
+    "auto_download_resources": "自动下载资源",
+    "room_members_deduplication": "群成员去重",
+    "room_msg_summary": "群消息记录整理与导出",
+    "export_room_members": "导出群成员",
+    "export_contacts": "导出好友列表",
+    "export_biz_list": "导出公众号列表",
+    "export_room_list": "导出群列表",
+    "user_msg_summary": "好友聊天记录导出",
+    "download_recent_user_images": "历史图片补下载",
+    "room_ai_reply": "群内 AI 自动回复",
+    "room_message_guard": "群消息规则治理",
+    "room_qrcode_guard": "二维码检测与群治理",
+    "vmq_monitor": "收款消息与 VMQ 集成",
+    "we_mp_rss_node": "公众号文章消息转发",
+}

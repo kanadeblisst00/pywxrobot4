@@ -1,0 +1,119 @@
+{
+  "base_url": "http://127.0.0.1:8000",
+  "token": "",
+  "wxpid": null,
+  "listen": "127.0.0.1:8787",
+  "callback_path": "/messages",
+  "state_file": "out/cases-state.json",
+  "apply": false,
+  "cases": {
+    "accept_user_request": {
+      "enabled": false,
+      "greetings": "你好，已通过好友申请。",
+      "keywords": ["合作"],
+      "keywords_only": false,
+      "classify_label": false,
+      "disturb": false,
+      "sns_permission": "默认"
+    },
+    "enter_room_tip": {
+      "enabled": false,
+      "welcome_messages": {
+        "123456@chatroom": "欢迎 @{nick_name}"
+      }
+    },
+    "invite_to_room": {
+      "enabled": false,
+      "keywords": {
+        "123456@chatroom": {
+          "keywords": "加群,进群",
+          "match_mode": "contains"
+        }
+      }
+    },
+    "auto_download_resources": {
+      "enabled": false,
+      "save_resource_type": {
+        "123456@chatroom": "图片&&视频&&文件"
+      },
+      "user_label_resource_type": {
+        "1": "图片"
+      }
+    },
+    "room_ai_reply": {
+      "enabled": false,
+      "room_configs": [
+        {
+          "roomid": "123456@chatroom",
+          "base_url": "https://api.openai.com/v1",
+          "api_key": "",
+          "model": "gpt-4o-mini",
+          "system_prompt": "你是群聊助手，用简短中文回答。"
+        }
+      ]
+    },
+    "room_message_guard": {
+      "enabled": false,
+      "kick_after_warning": false,
+      "warning_template": "@{user_name} 当前群不允许发送这类消息。",
+      "room_rules": [
+        {
+          "roomid": "123456@chatroom",
+          "mode": "allow_selected",
+          "message_types": ["text"]
+        }
+      ]
+    },
+    "room_qrcode_guard": {
+      "enabled": false,
+      "rooms": ["123456@chatroom"],
+      "kick_after_warning": false,
+      "warning_template": "@{user_name} 本群不允许发送二维码。",
+      "detector": ""
+    },
+    "vmq_monitor": {
+      "enabled": false,
+      "host": "http://127.0.0.1:8080",
+      "key": "",
+      "heartbeat_seconds": 60
+    },
+    "we_mp_rss_node": {
+      "enabled": false,
+      "upload_mode": "selected",
+      "whitelist": [],
+      "forward_url": "",
+      "token": ""
+    },
+    "dont_revoke": {},
+    "classify_labels": {
+      "labels": {
+        "123456@chatroom": "客户"
+      }
+    },
+    "room_members_deduplication": {
+      "rooms": ["123456@chatroom", "654321@chatroom"]
+    },
+    "room_msg_summary": {
+      "directory": "out"
+    },
+    "export_room_members": {
+      "directory": "out"
+    },
+    "export_contacts": {
+      "directory": "out"
+    },
+    "export_biz_list": {
+      "directory": "out"
+    },
+    "export_room_list": {
+      "directory": "out"
+    },
+    "user_msg_summary": {
+      "directory": "out",
+      "users": []
+    },
+    "download_recent_user_images": {
+      "users": []
+    }
+  }
+}
